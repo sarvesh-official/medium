@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar } from "./BlogCard";
+import { Avatar, SmallAvatar } from "./BlogCard";
 
 const Blog = ({
   blog,
@@ -28,7 +28,7 @@ const Blog = ({
           <div className="text-slate-500 text-lg">Author</div>
           <div className="flex w-full mt-1">
             <div className="pr-2 pt-1">
-              <Avatar name={blog.author.name} size={6} />
+              <SmallAvatar name={blog.author.name} size={6} />
             </div>
             <div>
               <div className="text-xl font-bold">{blog.author.name}</div>

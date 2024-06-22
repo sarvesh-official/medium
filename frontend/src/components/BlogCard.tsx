@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import Link from "next/link";
 
 interface BlogCardProps {
@@ -20,7 +21,7 @@ const BlogCard = ({
       <div className="border-b border-slate-200 pb-4 p-4 min-w-min cursor-pointer hover:scale-105 hover:animate-pulse">
         <div className="flex gap-1">
           <div className="flex justify-center flex-col">
-            <Avatar name={authorName} />
+            <SmallAvatar name={authorName} />
           </div>
           <div className="font-light pl-2 text-sm flex justify-center flex-col">
             {authorName}
@@ -49,7 +50,28 @@ export default BlogCard;
 export function Avatar({ name, size = 6 }: { name: string; size?: number }) {
   return (
     <div
-      className={`relative inline-flex items-center justify-center w-${size} h-${size} overflow-hidden rounded-full bg-gray-600`}
+      className={
+        "relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gray-600 h-10 w-10"
+      }
+    >
+      <span className="font-sm text-gray-600 dark:text-gray-300">
+        {name[0]}
+      </span>
+    </div>
+  );
+}
+export function SmallAvatar({
+  name,
+  size = 6,
+}: {
+  name: string;
+  size?: number;
+}) {
+  return (
+    <div
+      className={
+        "relative inline-flex items-center justify-center overflow-hidden rounded-full bg-gray-600 h-6 w-6"
+      }
     >
       <span className="font-sm text-gray-600 dark:text-gray-300">
         {name[0]}
