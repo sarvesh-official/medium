@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, SmallAvatar } from "./BlogCard";
+import { SmallAvatar } from "./BlogCard";
 
 const Blog = ({
   blog,
